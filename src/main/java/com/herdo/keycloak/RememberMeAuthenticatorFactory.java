@@ -58,11 +58,6 @@ public class RememberMeAuthenticatorFactory implements AuthenticatorFactory, Con
 	}
 
 	@Override
-	public AuthenticationExecutionModel.Requirement[] getRequirementChoices() {
-		return Arrays.asList(AuthenticationExecutionModel.Requirement.REQUIRED).toArray(new AuthenticationExecutionModel.Requirement[0]);
-	}
-
-	@Override
 	public List<ProviderConfigProperty> getConfigProperties() {
 		return null;
 	}
