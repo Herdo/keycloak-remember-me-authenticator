@@ -3,7 +3,7 @@
 
     <name>Keycloak Remember Me Authenticator</name>
     <description/>
-    <modelVersion>0.1.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.keycloak.extensions</groupId>
     <artifactId>keycloak-remember-me-authenticator</artifactId>
