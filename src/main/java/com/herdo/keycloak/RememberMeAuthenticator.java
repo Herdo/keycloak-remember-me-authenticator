@@ -7,6 +7,7 @@ import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel;
 
+// Author: Herdo
 public class RememberMeAuthenticator implements Authenticator {
 
     @Override
@@ -38,6 +39,6 @@ public class RememberMeAuthenticator implements Authenticator {
 
     @Override
     public void close() {
-        
+
     }
 }
