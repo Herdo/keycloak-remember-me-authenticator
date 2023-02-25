@@ -15,6 +15,11 @@ public class RememberMeAuthenticator implements Authenticator {
         context.getEvent().detail(Details.REMEMBER_ME, "true"); 
         context.success();
     }
+
+    @Override
+    public boolean configuredFor(KeycloakSession session, RealmModel realm, UserModel user) {
+        return true;
+    }
     
     @Override
     public void setRequiredActions(KeycloakSession session, RealmModel realm, UserModel user) {
