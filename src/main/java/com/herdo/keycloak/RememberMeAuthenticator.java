@@ -33,6 +33,11 @@ public class RememberMeAuthenticator implements Authenticator {
 
     @Override
     public void action(AuthenticationFlowContext context) {
+
+    }
+
+    @Override
+    public void close() {
         
     }
 }
