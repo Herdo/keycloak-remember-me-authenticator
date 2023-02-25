@@ -12,6 +12,7 @@ import org.keycloak.provider.ProviderConfigProperty;
 import java.util.Arrays;
 import java.util.List;
 
+// Author: Herdo
 public class RememberMeAuthenticatorFactory implements AuthenticatorFactory, ConfigurableAuthenticatorFactory {
 
     public static final String PROVIDER_ID = "remember-me-authenticator";
