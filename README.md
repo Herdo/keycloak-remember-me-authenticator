@@ -9,7 +9,8 @@ When you have your basic `Dockerfile` prepared, make the following adjustments:
 
 ```
 # Install "Remember Me" authenticator
-RUN curl -sL https://github.com/Herdo/keycloak-remember-me-authenticator/releases/download/v0.1.2/keycloak-remember-me-authenticator-0.1.2.jar -o /opt/keycloak/providers/keycloak-remember-me-authenticator-0.1.2.jar
+RUN curl -sL https://github.com/Herdo/keycloak-remember-me-authenticator/releases/download/v0.1.2/keycloak-remember-me-authenticator-0.1.2.jar \
+    -o /opt/keycloak/providers/keycloak-remember-me-authenticator-0.1.2.jar
 
 # Build image
 RUN /opt/keycloak/bin/kc.sh build
