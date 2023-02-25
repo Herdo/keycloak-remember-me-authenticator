@@ -55,4 +55,12 @@
       </plugins>
     </build>
 
+    <distributionManagement>
+      <repository>
+        <id>github</id>
+        <name>GitHub</name>
+        <url>https://maven.pkg.github.com/herdo/keycloak-remember-me-authenticator</url>  
+      </repository>
+    </distributionManagement>
+
 </project>
