@@ -13,4 +13,8 @@ public class RememberMeAuthenticator implements Authenticator {
         context.success();
     }
     
+    @Override
+    public void setRequiredActions(KeycloakSession session, RealmModel realm, UserModel user) {
+        
+    }
 }
