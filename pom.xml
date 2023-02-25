@@ -41,4 +41,8 @@
         </dependency>
     </dependencies>
 
+    <scm>
+      <developerConnection>scm:git:https://github.com/Herdo/keycloak-remember-me-authenticator.git</developerConnection>
+    </scm>
+
 </project>
