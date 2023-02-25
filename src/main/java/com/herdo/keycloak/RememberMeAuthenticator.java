@@ -30,4 +30,9 @@ public class RememberMeAuthenticator implements Authenticator {
     public boolean requiresUser() {
         return false;
     }
+
+    @Override
+    public void action(AuthenticationFlowContext context) {
+        
+    }
 }
