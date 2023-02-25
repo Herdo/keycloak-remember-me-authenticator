@@ -25,4 +25,9 @@ public class RememberMeAuthenticator implements Authenticator {
     public void setRequiredActions(KeycloakSession session, RealmModel realm, UserModel user) {
         
     }
+
+    @Override
+    public boolean requiresUser() {
+        return false;
+    }
 }
