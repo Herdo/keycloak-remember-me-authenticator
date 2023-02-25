@@ -7,7 +7,7 @@
 
     <groupId>org.keycloak.extensions</groupId>
     <artifactId>keycloak-remember-me-authenticator</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
