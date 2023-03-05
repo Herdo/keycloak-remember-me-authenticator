@@ -3,13 +3,12 @@ name: Release
 on:
   release:
     types: [created]
+  push:
 
 jobs:
   build:
-
+    name: Build binaries
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
     - uses: actions/checkout@v3
@@ -23,9 +22,29 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: Upload workflow artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: release-binaries
+        path: /home/runner/work/keycloak-remember-me-authenticator/keycloak-remember-me-authenticator/target/*.jar
+
+  upload:
+    name: Upload release binaries
+    if: github.event_name == 'release'
+    needs: build
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: release-binaries
 
     - name: Upload release artifacts
-      run: gh release upload "$GITHUB_REF_NAME" keycloak-remember-me-authenticator-*
+      run: gh release upload "$GITHUB_REF_NAME" release-binaries*
       env:
         GH_REPO: ${{ github.repository }}
         GH_TOKEN: ${{ github.token }}
