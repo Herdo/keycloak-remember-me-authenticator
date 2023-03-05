@@ -10,8 +10,8 @@ Custom authenticator for remembering the user logging in, even if no "Remember m
 
 ```
 # Install "Remember Me" authenticator
-RUN curl -sL https://github.com/Herdo/keycloak-remember-me-authenticator/releases/download/v0.1.2/keycloak-remember-me-authenticator-0.1.2.jar \
-    -o /opt/keycloak/providers/keycloak-remember-me-authenticator-0.1.2.jar
+RUN curl -sL https://github.com/Herdo/keycloak-remember-me-authenticator/releases/download/v1.0.0/keycloak-remember-me-authenticator-1.0.0.jar \
+    -o /opt/keycloak/providers/keycloak-remember-me-authenticator-1.0.0.jar
 
 # Build image
 RUN /opt/keycloak/bin/kc.sh build
