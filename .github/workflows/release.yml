@@ -44,7 +44,7 @@ jobs:
         name: release-binaries
 
     - name: Upload release artifacts
-      run: gh release upload "$GITHUB_REF_NAME" release-binaries*
+      run: gh release upload "$GITHUB_REF_NAME" /home/runner/work/keycloak-remember-me-authenticator/keycloak-remember-me-authenticator/*.jar
       env:
         GH_REPO: ${{ github.repository }}
         GH_TOKEN: ${{ github.token }}
