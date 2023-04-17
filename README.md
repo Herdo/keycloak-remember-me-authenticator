@@ -1,6 +1,17 @@
 # keycloak-remember-me-authenticator
 Custom authenticator for remembering the user logging in, even if no "Remember me" flag is set. Useful in combination with identity providers, which don't allow to set the "Remember me" flag.
 
+# Compatibility
+
+Since this package implements internal Keycloak SPIs, there's a chance this extension breaks with a new major version of Keycloak.  
+See compatibility list below to find the version that suits your Keycloak version.
+
+| Keycloak Version       | Extension Version                             |
+|------------------------|-----------------------------------------------|
+| `< 20.0.0`             | :warning: Not verified, use at your own risk. |
+| `>= 20.0.0 & < 21.0.0` | :white_check_mark: `1.0.0`                    |
+| `>= 21.0.0`            | :warning: Not verified, use at your own risk. |
+
 # Usage
 
 ## Keycloak as Docker container
